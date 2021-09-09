@@ -13,3 +13,4 @@ An online version of the classic word game Name Place Animal Thing.
 * Improve wordlist
 * Access Logging
 * Error Logging
+* Transfer host rights to a co-host when host leaves
