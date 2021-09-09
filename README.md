@@ -1,5 +1,6 @@
 # NPTA!
 An online version of the classic word game Name Place Animal Thing.
+Check it out [here](https://npta.herokuapp.com)
 
 ## Features
 
