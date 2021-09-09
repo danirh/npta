@@ -1,20 +1,21 @@
-<ion-header [translucent]="true">
+<ion-header mode="md">
   <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button slot="icon-only" (click)="onLogout()">
+        <ion-icon name="log-out-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
     <ion-title>
-      Blank
+      <ion-img src="/assets/icon/logo.png"></ion-img>
     </ion-title>
   </ion-toolbar>
 </ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <ion-refresher slot="fixed" (ionRefresh)="onRefresh()">
+      <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+  <div id="container" [class]="this.orientation">
+    <app-game [class]="this.orientation" [style.height]="sectionHeight"></app-game>
+    <app-chat [class]="this.orientation" [room]="room" [style.height]="sectionHeight"></app-chat>
   </div>
 </ion-content>

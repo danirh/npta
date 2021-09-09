@@ -1,0 +1,15 @@
+<h5>Your letter is <strong>&lsquo;{{letter}}&rsquo;</strong></h5>
+<form #inputForm="ngForm" (ngSubmit)="onLock()">
+  <div class="formgroup">
+    <input type="text" placeholder="Name" name="name" [(ngModel)]="model.name" autocomplete="off" [appInitials]="letter" (change)="onChange()">
+    <input type="text" placeholder="Place" name="place" [(ngModel)]="model.place" autocomplete="off" [appInitials]="letter" (change)="onChange()">
+    <input type="text" placeholder="Thing" name="thing" [(ngModel)]="model.thing" autocomplete="off" [appInitials]="letter" (change)="onChange()">
+    <input type="text" placeholder="Animal" name="animal" [(ngModel)]="model.animal" autocomplete="off" [appInitials]="letter" (change)="onChange()">
+  </div>
+  <ion-row class="ion-justify-content-center">
+    <ion-button type="submit" [disabled]="locked">Lock</ion-button>
+  </ion-row>
+</form>
+<div class="spinner-container">
+  <ion-spinner name="lines" color="primary"></ion-spinner>
+</div>

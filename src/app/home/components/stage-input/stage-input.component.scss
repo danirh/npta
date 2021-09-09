@@ -1,0 +1,47 @@
+:host {
+    display: flex;
+    height: 100%;
+    position: relative;
+    flex-direction: column;
+    overflow-y: auto;
+    align-items: center;
+    justify-content: center;
+    .formgroup {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: 1fr 1fr;
+        margin: 12px;
+    }
+    input {
+        width: 100%;
+        padding: 5px;
+        border: solid 2px palegoldenrod;
+        border-radius: 2px;
+        &.ng-invalid.ng-touched {
+            border-color: red;
+            outline: unset !important;
+        }
+    }
+    ion-button {
+        margin: 16px 0;
+    }
+    .spinner-container{
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+        background-color: rgba($color: #ffffff, $alpha: 0.5);
+        ion-spinner {
+            transform: scale(3);
+        }
+    }
+    &.submitting {
+        .spinner-container {
+            display: flex;
+        }
+    }
+
+}

@@ -1,0 +1,12 @@
+<p *ngIf="username==='Admin'; else elseBlock" class="adminMsg">
+  <ion-chip>
+    <ion-label>{{message}}</ion-label>
+  </ion-chip>
+</p>
+<ng-template #elseBlock>
+  <p #elseBlock>
+    <span class="message__name">{{username}}:</span><span class="message__text">{{message}}</span>
+    <!-- <span class="message__meta">{{createdAtTime}}</span> -->
+  </p>
+</ng-template>
+<!-- <p>{{message}}</p> -->

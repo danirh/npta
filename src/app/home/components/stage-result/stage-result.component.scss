@@ -1,0 +1,61 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .result-container {
+        margin: 8px;
+    }
+    .congrats {
+        margin-bottom: -20px;
+    }
+    .winners-list {
+        --ion-background-color: transparent;
+        padding: 0;
+    }
+    .list-item {
+        margin:  6px 12px;
+        background-color: cornsilk;
+        --padding-start: 8px;
+    }
+    .position {
+        font-size: 32px;
+        padding: 4px;
+        &::after {    
+            content: "";
+            position: absolute;
+            top: 8px;
+            left: 20px;
+            font-size: 12px;
+            color: white;
+            line-height: 16px;
+            transform: translateX(-50%);
+        }
+    }
+    .first {
+        color: gold;
+        &::after {
+            content: '1';
+        }
+    }
+    .second {
+        color: silver;
+        &::after {
+            content: '2';
+        }
+    }
+    .third {
+        color: #cd7f32;
+        &::after {
+            content: '3';
+        }
+    }
+    .player-name:not(:last-of-type)::after {
+        content: ',';
+    }
+    .avatar {
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-inline-end: 8px;
+    }
+}

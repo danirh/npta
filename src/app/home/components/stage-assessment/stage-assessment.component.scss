@@ -1,0 +1,80 @@
+:host {
+    display: flex;
+    height: 100%;
+    overflow-y: auto;
+    justify-content: center;
+    ion-grid {
+        margin: 12px;
+        width: calc(100% - 24px);
+    }
+    ion-row{
+        margin-bottom: 8px;
+    }
+    ion-row.body {
+        margin: 4px;
+    }
+    .header ion-col {
+        padding: 10px 4px;
+    }
+    .body ion-col {
+        padding: 3px;
+        .word-wrapper {
+            background-color: snow;
+            color: saddlebrown;
+            display: flex;
+            padding: 10px 4px;
+            text-align: center;
+            text-transform: capitalize;
+            font-size: 12px;
+            border-radius: 8px;
+            .word {
+                width: 100%;
+                line-height: 20px;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+            ion-icon {
+                font-size: 20px;
+                color: sandybrown;
+            }
+            box-shadow:  3px 3px 10px #e1d4c2,
+                         -3px -3px 10px #ffffed;
+        }
+        &.valid .word-wrapper {
+            background-color: palegreen;
+        }
+        &.invalid .word-wrapper {
+            text-decoration: line-through;
+            color: red;
+        }
+        &.valid.double .word-wrapper {
+            background-color: palegoldenrod;
+        }
+        // &:not(.correct) {
+        //     ion-icon {
+        //         display: none;
+        //     }
+        // }
+        // &.correct {
+        //     padding-right: 20px;
+        //     ion-icon {
+        //         position: absolute;
+        //         right: 8px;
+        //     }
+        // }
+    }
+    .header ion-col {
+        font-weight: bold;
+        text-transform: uppercase;
+        padding-left: 8px;
+        color: azure;
+    }
+
+    ion-row.header {
+        background: linear-gradient(145deg, #eec590, #c8a67a);
+        border-radius: 8px;
+        box-shadow:  3px 3px 10px #e1d4c2,
+                     -3px -3px 10px #ffffed;
+    }
+}

@@ -1,0 +1,12 @@
+<ion-grid>
+  <ion-row class="header">
+    <ion-col>Player</ion-col>
+    <ion-col>Round Score</ion-col>
+    <ion-col>Total Score</ion-col>
+  </ion-row>
+  <ion-row *ngFor="let score of scores.total" class="body">
+    <ion-col>{{score[0]}}</ion-col>
+    <ion-col>{{scores.round[score[0]]}}</ion-col>
+    <ion-col>{{score[1]}}</ion-col>
+  </ion-row>
+</ion-grid>

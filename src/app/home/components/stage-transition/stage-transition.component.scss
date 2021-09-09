@@ -1,0 +1,16 @@
+.funky-text {
+    font-size: 128px;
+    font-weight: bold;
+    color: blue;
+    font-family: "Comic Sans MS", "Comic Sans", "comic_sans", cursive;
+    height: 144px;
+    line-height: 144px;
+}
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    overflow-y: auto;
+}

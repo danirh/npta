@@ -1,0 +1,34 @@
+:host {
+    display: block;
+    margin-bottom: 12px;  
+    p {
+        margin: 0;
+    } 
+}
+
+/* Message Styles */
+
+.message__name {
+    font-weight: 600;
+    font-size: 14px;
+    margin-right: 8px;
+    color: saddlebrown;
+    white-space: nowrap;
+}
+
+.message__meta {
+    color: #777;
+    font-size: 14px;
+}
+
+.message__text {
+    color: #500000;
+}
+
+.adminMsg {
+    text-align: center;
+}
+
+.message a {
+    color: #0070CC;
+}

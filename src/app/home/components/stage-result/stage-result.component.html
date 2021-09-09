@@ -1,0 +1,27 @@
+<div class="result-container">
+  <ion-img class="congrats" src="/assets/icon/congrats4.png"></ion-img>
+  <ion-list class="winners-list" lines="none">
+    <ion-item class="list-item" *ngIf="winners.first.length">
+      <ion-avatar slot="start" class="avatar">
+        <ion-icon name="trophy" class="first position"></ion-icon>
+      </ion-avatar>
+      <ion-label><ng-container *ngFor="let winner of winners.first"><span class="player-name">{{winner}}</span><br></ng-container></ion-label>
+      <ion-chip slot="end">{{winners.firstScore}}</ion-chip>
+    </ion-item>
+    <ion-item class="list-item" *ngIf="winners.second.length">
+      <ion-avatar slot="start" class="avatar">
+        <ion-icon name="trophy" class="second position"></ion-icon>
+      </ion-avatar>
+      <ion-label><ng-container *ngFor="let winner of winners.second"><span class="player-name">{{winner}}</span><br></ng-container></ion-label>
+      <ion-chip slot="end">{{winners.secondScore}}</ion-chip>
+    </ion-item>
+    <ion-item class="list-item" *ngIf="winners.third.length">
+      <ion-avatar slot="start" class="avatar">
+        <ion-icon name="trophy" class="third position"></ion-icon>
+      </ion-avatar>
+      <ion-label><ng-container *ngFor="let winner of winners.third"><span class="player-name">{{winner}}</span><br></ng-container></ion-label>
+      <ion-chip slot="end">{{winners.thirdScore}}</ion-chip>
+    </ion-item>
+  </ion-list>
+</div>
+<ion-button (click)="newGame()" [disabled]="isDisabled">New Game</ion-button>

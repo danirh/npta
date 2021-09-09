@@ -1,0 +1,12 @@
+:host {
+    display: block;
+    padding: 30px;
+    text-align: center;
+    h5 {
+        color: #333;
+    }
+    hr {
+        margin-bottom: 20px;
+        background-color: var(--ion-color-primary);
+    }
+}

@@ -1,0 +1,18 @@
+:host {
+    color: maroon;
+    .stage-list {
+        padding-inline-start: 28px;
+        padding-inline-end: 12px;
+    }
+    .rules-list {
+        padding-inline-start: 28px;
+    }
+    li {
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+    .content {
+        height: 464px;
+        overflow-y: auto;
+    }
+}

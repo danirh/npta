@@ -1,0 +1,8 @@
++animal_eaglet
++thing_earring
++name_eminem
++place_etihad
++place_vishakhapatnam
++animal_vixen
++thing_gut
++thing_ratatouille

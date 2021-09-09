@@ -1,0 +1,41 @@
+:host {
+    display: flex;
+    height: 100%;
+    overflow-y: auto;
+    justify-content: center;
+    ion-grid {
+        margin: 4px 12px;
+    }
+    ion-col {
+        padding: 10px 4px;
+    }
+    ion-row.body {
+        gap: 2px;
+        margin: 0 8px;
+    }
+    .body ion-col {
+        color: saddlebrown;
+        font-size: 14px;
+        text-align: center;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        box-shadow:  inset 3px 3px 10px #e1d4c2,
+                     inset -3px -3px 10px #ffffed;
+    }
+    .header ion-col {
+        font-weight: bold;
+        text-align: center;
+        text-transform: uppercase;
+        padding-left: 8px;
+        color: azure;
+    }
+
+    ion-row.header {
+        background: linear-gradient(145deg, #eec590, #c8a67a);
+        border-radius: 8px;
+        margin-bottom: 12px;
+        box-shadow:  3px 3px 10px #e1d4c2,
+                     -3px -3px 10px #ffffed;
+    }
+}

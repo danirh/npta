@@ -1,0 +1,28 @@
+<ion-toolbar mode="md" *ngIf="headerShown">
+  <ion-chip slot="start">
+    <ion-icon name="hourglass-outline"></ion-icon>
+    <ion-label *ngIf="stageTimer | async as time; else elseBlock">{{time.min | number: '2.0-0'}}:{{time.sec | number: '2.0-0'}}</ion-label>
+    <ng-template #elseBlock>
+      <ion-label>00:00</ion-label>
+    </ng-template>
+  </ion-chip>
+  <ion-buttons slot="end">
+    <ion-button slot="icon-only" (click)="openScorecard()">
+      <ion-icon name="newspaper-outline"></ion-icon>
+    </ion-button>
+    <ion-button slot="icon-only" (click)="openStageHelp(stage)">
+      <ion-icon name="help-circle-outline"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+  <ion-title>Round {{round | async}}</ion-title>
+</ion-toolbar>
+
+<div [ngSwitch]="stage" class="game-area" [class.withheader]="headerShown">
+  <app-stage-start *ngSwitchCase="'start'"></app-stage-start>
+  <app-stage-transition *ngSwitchCase="'transition'"></app-stage-transition>
+  <app-stage-input *ngSwitchCase="'input'"></app-stage-input>
+  <app-stage-assessment *ngSwitchCase="'assessment'"></app-stage-assessment>
+  <app-stage-result *ngSwitchCase="'result'"></app-stage-result>
+  <app-stage-score *ngSwitchCase="'score'"></app-stage-score>
+  <p *ngSwitchDefault>Default Case {{stage}}</p>
+</div>

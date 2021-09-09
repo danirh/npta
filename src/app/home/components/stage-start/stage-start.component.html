@@ -1,0 +1,21 @@
+<h1>Welcome!</h1>
+<form *ngIf="isHost | async; else elseBlock">
+    <ion-list lines="none" class="ion-no-padding">
+        <ion-item>
+            <ion-label>No. of Rounds</ion-label>
+            <ion-select placeholder="Select One" interface="popover" mode="ios" [formControl]="rounds">
+                <ion-select-option value="2">2</ion-select-option>
+                <ion-select-option value="3">3</ion-select-option>
+                <ion-select-option value="4">4</ion-select-option>
+                <ion-select-option value="5">5</ion-select-option>
+                <ion-select-option value="7">7</ion-select-option>
+            </ion-select>
+        </ion-item>
+    </ion-list>
+    <ion-button (click)="onStartGame()">START GAME</ion-button>
+</form>
+<ng-template #elseBlock>
+    <p>Waiting for the host<br/>to start the game</p>
+</ng-template>
+<ion-button (click)="openRules()">READ RULES</ion-button>
+<ion-button (click)="onShareGame()">SHARE via WhatsApp</ion-button>

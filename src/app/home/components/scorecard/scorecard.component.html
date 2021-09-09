@@ -1,0 +1,18 @@
+<ion-header class="ion-no-border" mode="md">
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-center">Scorecard</ion-title>
+  </ion-toolbar>
+</ion-header>
+<div class="content">
+  <ng-container *ngIf="scores.total.length; else elseBlock">
+    <h5 *ngFor="let score of scores.total" class="ion-text-center">{{score[0]}} - {{score[1]}}</h5>
+  </ng-container>
+  <ng-template #elseBlock>
+    <h4>No scores available yet.</h4>
+  </ng-template>
+</div>
+<ion-footer class="ion-no-border">
+  <ion-toolbar class="ion-text-center">
+    <ion-button (click)="dismissPopover()">DISMISS</ion-button>
+  </ion-toolbar>
+</ion-footer>

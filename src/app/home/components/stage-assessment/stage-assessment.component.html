@@ -1,0 +1,42 @@
+<ion-grid>
+  <ion-row class="header">
+    <ion-col>Name</ion-col>
+    <ion-col>Place</ion-col>
+    <ion-col>Thing</ion-col>
+    <ion-col>Animal</ion-col>
+  </ion-row>
+  <ion-row *ngFor="let input of inputs" class="body">
+    <ion-col size="3" [class.valid]="validWordsMap['name_'+input[1].name] || correctWords['name_'+input[1].name]"
+      [class.invalid]="invalidWords['name_'+input[1].name]" [class.double]="doubleWords['name_'+input[1].name]"
+      (click)="toggleVote('name',input[1].name)" (contextmenu)="presentWordPopover($event,'name',input[1].name)">
+      <div class="word-wrapper">
+        <div class="word">{{input[1].name || "--"}}</div>
+        <ion-icon [class.ion-hide]="!voteMap['name_'+input[1].name]" name="thumbs-up-sharp"></ion-icon>
+      </div>
+    </ion-col>
+    <ion-col size="3" [class.valid]="validWordsMap['place_'+input[1].place] || correctWords['place_'+input[1].place]"
+      [class.invalid]="invalidWords['place_'+input[1].place]" [class.double]="doubleWords['place_'+input[1].place]"
+      (click)="toggleVote('place',input[1].place)" (contextmenu)="presentWordPopover($event,'place',input[1].place)">
+      <div class="word-wrapper">
+        <div class="word">{{input[1].place || "--"}}</div>
+        <ion-icon [class.ion-hide]="!voteMap['place_'+input[1].place]" name="thumbs-up-sharp"></ion-icon>
+      </div>
+    </ion-col>
+    <ion-col size="3" [class.valid]="validWordsMap['thing_'+input[1].thing] || correctWords['thing_'+input[1].thing]"
+      [class.invalid]="invalidWords['thing_'+input[1].thing]" [class.double]="doubleWords['thing_'+input[1].thing]"
+      (click)="toggleVote('thing',input[1].thing)" (contextmenu)="presentWordPopover($event,'thing',input[1].thing)">
+      <div class="word-wrapper">
+        <div class="word">{{input[1].thing || "--"}}</div>
+        <ion-icon [class.ion-hide]="!voteMap['thing_'+input[1].thing]" name="thumbs-up-sharp"></ion-icon>
+      </div>
+    </ion-col>
+    <ion-col size="3" [class.valid]="validWordsMap['animal_'+input[1].animal] || correctWords['animal_'+input[1].animal]"
+      [class.invalid]="invalidWords['animal_'+input[1].animal]" [class.double]="doubleWords['animal_'+input[1].animal]"
+      (click)="toggleVote('animal',input[1].animal)" (contextmenu)="presentWordPopover($event,'animal',input[1].animal)">
+      <div class="word-wrapper">
+        <div class="word">{{input[1].animal || "--"}}</div>
+        <ion-icon [class.ion-hide]="!voteMap['animal_'+input[1].animal]" name="thumbs-up-sharp"></ion-icon>
+      </div>
+    </ion-col>
+  </ion-row>
+</ion-grid>

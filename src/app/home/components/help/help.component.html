@@ -1,0 +1,16 @@
+<ion-header class="ion-no-border" mode="md">
+  <ion-toolbar color="primary">
+    <ion-title>Stage Help</ion-title>
+  </ion-toolbar>
+</ion-header>
+<div class="content">
+  <h4>Stage: {{stage | uppercase}}</h4>
+  <ul>
+    <li *ngFor="let text of helpTexts.get(stage)">{{text}}</li>
+  </ul>
+</div>
+<ion-footer class="ion-no-border">
+  <ion-toolbar class="ion-text-center">
+    <ion-button (click)="dismissPopover()">DISMISS</ion-button>
+  </ion-toolbar>
+</ion-footer>

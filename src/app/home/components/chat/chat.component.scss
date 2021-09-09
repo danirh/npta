@@ -1,0 +1,93 @@
+:host {
+    display: block;
+    height: 50%;
+    flex-shrink: 0;
+    // background-color: #333744;
+    overflow: auto;
+    box-shadow: 0px -4px 5px -2px rgba(0,0,0,0.15);
+    &.landscape {
+        height: 100%;
+        flex: 1 1 0;
+    }
+}
+/* Chat Page Layout */
+
+.chat {
+    display: flex;
+    height: 100%;
+}
+
+.chat__sidebar {
+    height: 100%;
+    color: white;
+    background: var(--ion-color-primary-tint,#c48567);
+    flex: 0 0 36%;
+    overflow-y: scroll
+}
+
+/* Chat styles */
+
+.chat__main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    max-width: 64%;
+    // max-height: 50vh;
+}
+
+.chat__messages {
+    flex-grow: 1;
+    padding: 12px 12px 0 12px;
+    overflow-y: scroll;
+}
+
+
+/* Message Composition Styles */
+
+.compose {
+    display: flex;
+    flex-shrink: 0;
+    margin-top: 16px;
+}
+
+.compose form {
+    display: flex;
+    flex-grow: 1;
+}
+
+.compose input {
+    border: 1px solid #eeeeee;
+    width: 100%;
+    padding: 12px;
+    flex-grow: 1;
+}
+
+.compose button {
+    font-size: 14px;
+}
+
+/* Chat Sidebar Styles */
+
+.room-title {
+    font-weight: 400;
+    font-size: 18px;
+    background: var(--ion-color-primary-shade,#a6694c);
+    padding: 16px 12px;   
+}
+
+.list-title {
+    font-weight: 500;
+    font-size: 16px;
+    margin-bottom: 4px;
+    padding: 0 12px 0 16px;
+}
+
+.users {
+    list-style-type: none;
+    font-weight: 300;
+    font-size: 15px;
+    padding: 0 12px 0 16px;
+    li {
+        margin: 12px 0;
+    }
+}

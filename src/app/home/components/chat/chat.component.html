@@ -1,0 +1,23 @@
+<div class="chat">
+  <div id="sidebar" class="chat__sidebar">
+    <h2 class="room-title">{{room}}</h2>
+    <h3 class="list-title">Users</h3>
+    <ul class="users">
+            <li *ngFor="let user of users">{{user.username}}{{user.isHost ? '(host)':''}}</li>
+    </ul>
+  </div>
+  <div class="chat__main">
+      <div id="messages" class="chat__messages">
+          <ng-container *ngFor="let message of messages">
+            <app-message [by]="message.username" [at]="message.createdAt" [content]="message.text" (afterViewInitEvent)="autoScroll()"></app-message>
+          </ng-container>
+      </div>
+
+      <div class="compose">
+          <form (ngSubmit)="onSubmit()" #messageForm="ngForm" id="message-form">
+              <input name="message" placeholder="Message" required autocomplete="off" [(ngModel)]="composedMessage">
+              <button>Send</button>
+          </form>
+      </div>
+  </div>
+</div>
