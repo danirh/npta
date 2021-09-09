@@ -1,4 +1,4 @@
-# npta
+# NPTA!
 An online version of the classic word game Name Place Animal Thing.
 
 ## Features
