@@ -7,7 +7,7 @@ function socketHandler(io) {
     return (socket) => {
         socket.on('join', (options, callback) => {
             const { error, user, host } = addUser({ id: socket.id, ...options });
-            const isHost = host === user.username ? true: false;
+            const isHost = host === user?.username ? true: false;
 
             if (error) {
                 return callback(error)
